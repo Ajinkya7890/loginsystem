@@ -20,7 +20,7 @@ connection.connect(function(error) {
     if (error) throw error;
     console.log("Connected to database successfully");
 });
-
+ 
 // Serve the main login page
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
