@@ -6,7 +6,7 @@ const app = express();
 // const login=require("./login.css")
 const encoder = bodyParser.urlencoded({ extended: true }); // Use extended option for better parsing
 
- 
+app.use("/assets",express.static("assets")); 
 
 const connection = mysql.createConnection({
     host: "localhost", 
