@@ -1,0 +1,53 @@
+/* <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close"></ion-icon></span>        Closing icon
+      <div class="form-box login">
+        <h2>Login</h2>                                                          login heading
+        <form id="login-form" action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input id="login-email" type="text" required />
+            <label for="">Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <input id="login-password" type="password" required />
+            <label for="">Password</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+            <input id="login-mobile" type="password" required />
+            <label for="">Mobile Number</label>
+          </div>
+          <div class="rememebr-forgot">
+            <label><input type="checkbox" />Remember me</label>
+            <a href="#">Forogt Password</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>
+              Don't have an account?<a href="#" class="register-link"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div> */
+
+
+      .wrapper {
+        position: relative;
+        width: 400px;
+        height: 440px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transform: scale(0);
+        transition: transform 0.5s ease, height 0.2s ease;
+      }
+      
