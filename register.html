@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/Front end/Css/login.css" />
+    <!-- <link rel="stylesheet" href="/Front end/Css/login.css" /> -->
+     <link rel="stylesheet" href="/assets/register.css">
   </head>
   <body>
     <!-- <h1>Register</h1>
@@ -18,45 +19,45 @@
       <source src="/media/1st video.mp4" type="video/mp4" />
     </video>
     <header>
-      <h2 class="logo">Tempest</h2>
+      <!-- <h2 class="logo">Tempest</h2> -->
       <nav class="navigation">
-        <a href="#">Home</a>
+        <!-- <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>
-        <a href="#">Contact</a>
-        <button class="btnlogin-popup">Login</button>
+        <a href="#">Contact</a> -->
+        <!-- <button class="btnlogin-popup">Login</button> -->
       </nav>
     </header>
     <div class="wrapper">
       <span class="icon-close"><ion-icon name="close"></ion-icon></span>
       <div class="form-box login">
-        <h2>Login</h2>
+        <h2>Registration</h2>
         <form id="login-form" action="#">
           <div class="input-box">
             <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-            <input id="login-email" type="text" required />
-            <label for="">Email</label>
+            <input id="login-email" type="text" name="username" required />
+            <label for="">username</label>
           </div>
           <div class="input-box">
             <span class="icon"
               ><ion-icon name="lock-closed-outline"></ion-icon
             ></span>
-            <input id="login-password" type="password" required />
+            <input id="login-password" type="password" name="password" required />
             <label for="">Password</label>
           </div>
-          <div class="input-box">
+          <!-- <div class="input-box">
             <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
             <input id="login-mobile" type="password" required />
             <label for="">Mobile Number</label>
-          </div>
+          </div> -->
           <div class="rememebr-forgot">
             <label><input type="checkbox" />Remember me</label>
             <a href="#">Forogt Password</a>
           </div>
-          <button type="submit" class="btn">Login</button>
+          <button type="submit" class="btn">Register</button>
           <div class="login-register">
             <p>
-              Don't have an account?<a href="#" class="register-link"
+              Already have an account?<a href="/index.html" class="register-link"
                 >Register</a
               >
             </p>
@@ -64,7 +65,7 @@
         </form>
       </div>
 
-      <div class="form-box register">
+      <!-- <div class="form-box register">
         <h2>Registration</h2>
         <form id="register-form" action="#">
           <div class="input-box">
@@ -104,253 +105,8 @@
             </p>
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
-    <style>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/assets/register.css">
-</head>
-<body>
-    <h1>Register</h1>
-    <form action="/register" method="post">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="/">Login here</a></p>
->>>>>>> 715b4d49f91216ba549f60dd546a05b1e417aebe
-    
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* background: url("/videos/1st\ video.mp4") no-repeat; */
-    /* background: url("/images/1st\ image.jpg") no-repeat; */
-    background-size: cover;
-    background-position: center;
-
-}
-.back_video{
-    position:fixed;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding:20px 100px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-}
-.logo{
-    font-size:2em;
-    color: fff;
-    user-select: none;
-}
-.navigation a{
-    position: relative;
-    font-size: 1.1em;
-    color: #fff;
-    text-decoration:none ;
-    font-weight: 500;
-    margin-left: 40px;
-}
-.navigation a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: center;
-    transform: scaleX(0);
-    transition :transform .5s;
-}
-.navigation a:hover::after{
-    transform-origin: center;
-    transform: scaleX(1);
-}
-.navigation .btnlogin-popup{
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius:6px ;
-    cursor: pointer;
-    font-size:1.1em ;
-    color: fff;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-}
-.navigation .btnlogin-popup:hover{
-    background: #fff;
-    color: rgb(9, 5, 5);
-}
-
-.wrapper.active-popup{
-    transform: scale(1); 
-}
-.wrapper.active{
-    height: 520px;
-}
-.wrapper .form-box{
-    width: 100%;
-    padding: 40px;
-}
-.wrapper .form-box.login{
-    
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-.wrapper.active .form-box.login{
-    transition: none;
-    transform: translateX(-400px);
-}
-.wrapper .form-box.register{
-    position: absolute;
-    transition: none;
-    transform: translate(400px);
-}
-.wrapper.active .form-box.register{
-    /* display: none; */
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-.wrapper .icon-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: #fff;
-    font-size: 2em;
-    color: #050404;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-}
-.form-box h2{
-    font-size: 2em;
-    color:#dbdfe1;
-    text-align: center;
-}
-.input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom:2px solid #fff;
-    margin: 30px 0;
-}
-.input-box label{
-    position:absolute ;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50);
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
-
-}
-.input-box input:focus~label,.input-box input:valid~label{
-    top: -5px;
-}
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 600;
-    padding:0 35px 0 5px ;
-}
-.input-box .icon{
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #fff;
-    line-height: 57px;
-}
-.rememebr-forgott{
-    font-size: .9em;
-    color: #fff;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    /* justify-content:space-evenly; */
-}
-.rememebr-forgot label{
-    color: #0c0909;
-}
-.rememebr-forgot label input{
-    accent-color:#fff;
-    margin-right: 3px;
-}
-.rememebr-forgot a{
-    color: #fff;
-    text-decoration: none;
-    padding-left: 30px;
-}
-.rememebr-forgot a:hover{
-    text-decoration:underline ;
-}
-.btn{
-    width: 100%;
-    height: 45px;
-    background: #dbdfe1;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #090c0e;
-    font-weight: 500;
-}
-.login-register{
-    font-size:  0.9em;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 25px 0 10px;
-    text-align: center;
-}
-.login-register p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding-left: 30px;
-}
-.login-register p a:hover{
-    text-decoration: underline;
-}
-    </style>
     <script src="/Front end/js/login.js"></script>
     <script
       type="module"
