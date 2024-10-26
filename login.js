@@ -5,9 +5,9 @@ const bcrypt = require("bcrypt"); // Import bcrypt for password hashing
 const app = express();
 // const login=require("./login.css")
 const encoder = bodyParser.urlencoded({ extended: true }); // Use extended option for better parsing
-
+const path = require('path');
 app.use("/assets",express.static("assets")); 
-
+app.use("/earth",express.static("earth")); 
 const connection = mysql.createConnection({
     host: "localhost", 
     user: "root", 
@@ -21,6 +21,14 @@ connection.connect(function(error) {
     console.log("Connected to database successfully");
 });
  
+app.get('/earth/about.html', (req, res) => {
+    res.sendFile(path.join(__dirname,  'earth', 'about.html'));
+});
+
+app.get('/earth/contactus.html', (req, res) => {
+    res.sendFile(path.join(__dirname,  'earth', 'contactus.html'));
+});
+
 // Serve the main login page
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
