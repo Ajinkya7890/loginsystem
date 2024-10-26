@@ -14,7 +14,7 @@
   .experience {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
   }
   
   .credits {
@@ -32,5 +32,5 @@
 
   .video
 {
-    width: 1000px;
+    width: 100px;
 }
