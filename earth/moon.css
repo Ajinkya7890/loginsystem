@@ -12,7 +12,7 @@ h1{
     .earth{
         flex-direction: column;
         display: flex;
-        justify-content: center;
+        justify-content: 20%;
         align-items: center;
     }
 
@@ -22,7 +22,7 @@ h1{
 
     .earth .content h1{
         text-align: center;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .earth .content p{
@@ -41,4 +41,4 @@ h1{
     }
     
 
-}  
+}   
